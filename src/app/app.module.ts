@@ -4,14 +4,15 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ListaPessoaComponent } from './lista-pessoa/lista-pessoa.component';
+import { NovoPessoaComponent } from './novo-pessoa/novo-pessoa.component';
 
-import { ListaUsuarioComponent } from './lista-usuario/lista-usuario.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     ListaPessoaComponent,
-    ListaUsuarioComponent
+    NovoPessoaComponent,
   ],
   imports: [
     BrowserModule,
