@@ -1,20 +1,17 @@
 export class Pessoa {
-    public  idpessoa: number; 
 
-    public   nome : string; 
+    public  id: number; 
 
-    public   sobrenome : string;
+    public   nome: string; 
 
-    public   cpf : string ;
+    public   sobrenome: string;
 
-    public   telefone : string ;
+    public   cpf: string ;
 
-    public   email : string ;
+    public   telefone: string ;
 
-    public   endereco : string ;
+    public   email: string ;
 
-
-
-
+    public   endereco: string ;
 
 }
