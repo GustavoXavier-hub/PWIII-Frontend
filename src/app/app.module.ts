@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ListaPessoaComponent } from './lista-pessoa/lista-pessoa.component';
 import { NovoPessoaComponent } from './novo-pessoa/novo-pessoa.component';
-
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -16,7 +16,8 @@ import { NovoPessoaComponent } from './novo-pessoa/novo-pessoa.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
