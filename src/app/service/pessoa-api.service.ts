@@ -37,9 +37,27 @@ export class PessoaAPIService {
                               catchError(this.handleError))
       }
 
-      createPessoa(clie: Pessoa): Observable<Pessoa> {
-        return this.httpClient.post<Pessoa>(`${this.apiURL}`, clie)
+      createPessoa(pessoa: Pessoa): Observable<Pessoa> {
+        return this.httpClient.post<Pessoa>(`${this.apiURL}`, pessoa)
                               .pipe(retry(1),
                                 catchError(this.handleError));
         }
+
+        deletePessoa(id: number): Observable<Pessoa> {
+          return this.httpClient.delete<Pessoa>(`${this.apiURL}/${id}`)
+                                .pipe(retry(1),
+                                  catchError(this.handleError));
+          }
+
+        
+
+        putPessoa(){} 
+
+
+        //putPessoas(): Observable<Pessoa[]> { 
+          //return this.httpClient.put<Pessoa[]>(`${this.apiURL}`,pessoa)
+          //.pipe(retry(1),
+          //catchError(this.handleError))
+
+        //}
 }

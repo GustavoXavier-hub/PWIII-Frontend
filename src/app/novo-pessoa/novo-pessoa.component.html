@@ -1,24 +1,24 @@
 <h3>Novo Cliente</h3>
-<form>
+<form [formGroup]="formPessoa" (ngSubmit)="onSalvar()"  >
 <div class="form-group">
 <label for="name">Nome:</label>
-<input type="text" class="form-control" id="inNome" name="inNome">
+<input type="text" class="form-control" id="inNome" formControlName="nome">
 
 
 <label for="sobrenome">Sobrenome:</label>
-<input type="text" class="form-control" id="inSobreNome" name="inSobreNome">
+<input type="text" class="form-control" id="inSobreNome" formControlName="sobrenome">
 
 <label for="cpf">CPF:</label>
-<input type="text" class="form-control" id="inCpf" name="inCpf">
+<input type="text" class="form-control" id="inCpf" formControlName="cpf">
 
 <label for="telefone">Telefone:</label>
-<input type="text" class="form-control" id="inTelefone" name="inTelefone">
+<input type="text" class="form-control" id="inTelefone" formControlName="telefone">
 
 <label for="endereco">Endereço:</label>
-<input type="text" class="form-control" id="inEndereco" name="inEndereco">
+<input type="text" class="form-control" id="inEndereco" formControlName="endereco">
 
 <label for="email">Email:</label>
-<input type="text" class="form-control" id="inEmail" name="inEmail">
+<input type="text" class="form-control" id="inEmail" formControlName="email">
 
 </div>
 <!-- OUTROS CAMPOS DA API -->

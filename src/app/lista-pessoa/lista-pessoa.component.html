@@ -8,6 +8,10 @@
         <tr>
           <th>Nome</th>
           <th>Sobrenome</th>
+          <th>CPF</th>
+          <th>Telefone</th>
+          <th>Email</th>
+          <th>Endereço</th>
           <th>Ações</th>
         </tr>
       </thead>
@@ -16,8 +20,12 @@
         <tr *ngFor="let it of pessoas">
           <td>{{it.nome}}</td>
           <td>{{it.sobrenome}}</td>
+          <td>{{it.cpf}}</td>
+          <td>{{it.telefone}}</td>
+          <td>{{it.email}}</td>
+          <td>{{it.endereco}}</td>
           <td>
-            <button class="btn btn-danger">Excluir</button>
+            <button class="btn btn-danger" (click)="excluir(it.id)" >Excluir</button>
             <button class="btn btn-info" style="margin-left: 10px">Editar</button>
             <button class="btn btn-info" style="margin-left: 10px">Detalhar</button>
           </td>

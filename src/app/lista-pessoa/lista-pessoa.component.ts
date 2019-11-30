@@ -15,14 +15,25 @@ export class ListaPessoaComponent implements OnInit {
   constructor(private service: PessoaAPIService) { }
 
   ngOnInit() {
+    this.loadData();
+  }
+
+  loadData() {
     this.service
     .getPessoas()
     .subscribe((data: Pessoa[]) => this.pessoas = data,
     error => console.log(error));
 
+  }
 
 
+  excluir(id: number){
+    this.service
+    .deletePessoa(id)
+    .subscribe((data: Pessoa) =>  this.loadData(),
+    error => console.log(error));
 
+   
   }
 
 }
