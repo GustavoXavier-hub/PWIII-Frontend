@@ -12,7 +12,7 @@ import { retry, catchError } from 'rxjs/operators';
 })
 export class PessoaAPIService {
 
-  apiURL : string = "http://localhost:8080/api/clientes";
+  apiURL : string = "http://localhost:8004/plat/pessoa";
 
   constructor(private httpClient: HttpClient) {
 

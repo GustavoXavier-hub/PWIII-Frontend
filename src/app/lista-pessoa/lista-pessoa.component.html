@@ -1,27 +1,29 @@
 <div class="panel panel-primary">
   <div class="panel-heading">
-  <h2>Lista de Clientes</h2>
+    <h2>Lista de Clientes</h2>
   </div>
   <div class="panel-body">
-  <table class="table table-striped">
-  <thead>
-  <tr>
-  <th>Coluna 1</th>
-  <th>Ações</th>
-  </tr>
-  </thead>
-   
-  <tbody>
-    <tr *ngFor="let it of clientes">
-    <td>{{it.Nome}}</td>
-    <td>
-    <button class="btn btn-danger">Excluir</button>
-    <button class="btn btn-info" style="margin-left: 10px">Editar</button>
-    <button class="btn btn-info" style="margin-left: 10px">Detalhar</button>
-    </td>
-    </tr>
-    </tbody>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Nome</th>
+          <th>Sobrenome</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
 
-  </table>
+      <tbody>
+        <tr *ngFor="let it of pessoas">
+          <td>{{it.nome}}</td>
+          <td>{{it.sobrenome}}</td>
+          <td>
+            <button class="btn btn-danger">Excluir</button>
+            <button class="btn btn-info" style="margin-left: 10px">Editar</button>
+            <button class="btn btn-info" style="margin-left: 10px">Detalhar</button>
+          </td>
+        </tr>
+      </tbody>
+
+    </table>
   </div>
-  </div>
+</div>
